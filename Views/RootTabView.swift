@@ -1,22 +1,28 @@
 import SwiftUI
 
 struct RootTabView: View {
+    @EnvironmentObject var store: AppStore
+
     var body: some View {
         TabView {
             SummaryView()
-                .tabItem { Label("Özet", systemImage: "chart.bar.fill") }
+                .tabItem { Label(Localization.shared.string("tab_summary", for: store.settings.language), systemImage: "chart.bar.fill") }
 
             HealthView()
-                .tabItem { Label("Sağlık", systemImage: "heart.fill") }
+                .tabItem { Label(Localization.shared.string("tab_health", for: store.settings.language), systemImage: "heart.fill") }
 
             AchievementsView()
-                .tabItem { Label("Kazanımlar", systemImage: "medal.fill") }
+                .tabItem { Label(Localization.shared.string("tab_achievements", for: store.settings.language), systemImage: "medal.fill") }
 
             BreathTestView()
-                .tabItem { Label("Test", systemImage: "lungs.fill") }
+                .tabItem { Label(Localization.shared.string("tab_breath", for: store.settings.language), systemImage: "lungs.fill") }
 
-            SettingsView()
-                .tabItem { Label("Ayarlar", systemImage: "gearshape.fill") }
+            if #available(iOS 17.0, *) {
+                SettingsView()
+                    .tabItem { Label(Localization.shared.string("tab_settings", for: store.settings.language), systemImage: "gearshape.fill") }
+            } else {
+                // Fallback
+            }
         }
     }
 }

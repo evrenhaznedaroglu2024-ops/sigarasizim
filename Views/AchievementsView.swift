@@ -3,13 +3,15 @@ import SwiftUI
 struct AchievementsView: View {
     @EnvironmentObject var store: AppStore
 
+    @State private var orientation = UIDevice.current.orientation
+
     var body: some View {
         let stats = StatsCalculator.compute(now: Date(), settings: store.settings, session: store.session)
-        let achievements = AchievementsEngine.build(stats: stats)
+        let achievements = AchievementsEngine.build(stats: stats, language: store.settings.language)
 
-        NavigationView {
+        NavigationStack {
             ScrollView {
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), spacing: 12)], spacing: 12) {
                     ForEach(achievements) { a in
                         VStack(alignment: .leading, spacing: 8) {
                             HStack {
@@ -28,12 +30,16 @@ struct AchievementsView: View {
                 }
                 .padding()
 
-                BannerAdView(adUnitID: "ca-app-pub-3940256099942544/2934735716")
+                BannerAdView(adUnitID: AdConfig.bannerID)
                     .frame(height: 50)
                     .padding(.vertical, 8)
                     .padding(.horizontal)
             }
-            .navigationTitle("Kazanımlar")
+            .navigationTitle(Localization.shared.string("achievements_title", for: store.settings.language))
         }
+        .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
+            orientation = UIDevice.current.orientation
+        }
+        .id(orientation)
     }
 }

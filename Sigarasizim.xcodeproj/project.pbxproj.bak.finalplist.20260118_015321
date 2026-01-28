@@ -23,13 +23,11 @@
 		E428AA822F1C342B00D72175 /* QuitSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428AA642F1C342B00D72175 /* QuitSession.swift */; };
 		E428AA832F1C342B00D72175 /* StatsCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428AA6A2F1C342B00D72175 /* StatsCalculator.swift */; };
 		E428AA842F1C342B00D72175 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428AA6E2F1C342B00D72175 /* AchievementsView.swift */; };
-		E43F6E342F1C50070097DB64 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = E43F6E332F1C50070097DB64 /* GoogleMobileAds */; };
-		E48A2AD32F1D8ECA00D6797F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48A2AD22F1D8ECA00D6797F /* Assets.xcassets */; };
+		E428AA8A2F1C3A1E00D72175 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = E428AA892F1C3A1E00D72175 /* GoogleMobileAds */; };
 		F4D3274397320A944D007728 /* SigarasizimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3294BEF7B95A951335AF4 /* SigarasizimApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6BB3294BEF7B95A951335AF4 /* SigarasizimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigarasizimApp.swift; sourceTree = "<group>"; };
 		E428AA522F1C329200D72175 /* Sigarasizim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sigarasizim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E428AA602F1C342B00D72175 /* AdMobManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobManager.swift; sourceTree = "<group>"; };
 		E428AA612F1C342B00D72175 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
@@ -47,7 +45,7 @@
 		E428AA712F1C342B00D72175 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
 		E428AA722F1C342B00D72175 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E428AA732F1C342B00D72175 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
-		E48A2AD22F1D8ECA00D6797F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6BB3294BEF7B95A951335AF4 /* SigarasizimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigarasizimApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E43F6E342F1C50070097DB64 /* GoogleMobileAds in Frameworks */,
+				E428AA8A2F1C3A1E00D72175 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +63,6 @@
 		E428AA492F1C329200D72175 = {
 			isa = PBXGroup;
 			children = (
-				E48A2AD22F1D8ECA00D6797F /* Assets.xcassets */,
 				E428AA532F1C329200D72175 /* Products */,
 				E428AA632F1C342B00D72175 /* Ads */,
 				E428AA662F1C342B00D72175 /* Models */,
@@ -73,8 +70,7 @@
 				E428AA6D2F1C342B00D72175 /* Store */,
 				E428AA742F1C342B00D72175 /* Views */,
 				6BB3294BEF7B95A951335AF4 /* SigarasizimApp.swift */,
-				E43F6E322F1C50070097DB64 /* Frameworks */,
-			);
+		);
 			sourceTree = "<group>";
 		};
 		E428AA532F1C329200D72175 /* Products */ = {
@@ -136,13 +132,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		E43F6E322F1C50070097DB64 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,7 +149,7 @@
 			);
 			name = Sigarasizim;
 			packageProductDependencies = (
-				E43F6E332F1C50070097DB64 /* GoogleMobileAds */,
+				E428AA892F1C3A1E00D72175 /* GoogleMobileAds */,
 			);
 			productName = Sigarasizim;
 			productReference = E428AA522F1C329200D72175 /* Sigarasizim.app */;
@@ -208,7 +197,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E48A2AD32F1D8ECA00D6797F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +224,7 @@
 				E428AA832F1C342B00D72175 /* StatsCalculator.swift in Sources */,
 				E428AA842F1C342B00D72175 /* AchievementsView.swift in Sources */,
 				F4D3274397320A944D007728 /* SigarasizimApp.swift in Sources */,
-			);
+		);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
@@ -245,6 +233,7 @@
 		E428AA5B2F1C329300D72175 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -295,8 +284,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = Sigarasizim/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -311,6 +298,7 @@
 		E428AA5C2F1C329300D72175 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -355,8 +343,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = Sigarasizim/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -370,17 +356,13 @@
 		E428AA5E2F1C329300D72175 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K6PZTU2H6W;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = Sigarasizim/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -391,10 +373,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.idakimi.Sigarasizim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -408,16 +389,13 @@
 		E428AA5F2F1C329300D72175 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K6PZTU2H6W;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = Sigarasizim/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,7 +406,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.idakimi.Sigarasizim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -476,7 +454,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E43F6E332F1C50070097DB64 /* GoogleMobileAds */ = {
+		E428AA892F1C3A1E00D72175 /* GoogleMobileAds */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E428AA882F1C3A1E00D72175 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
 			productName = GoogleMobileAds;
