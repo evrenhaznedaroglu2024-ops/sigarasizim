@@ -3,9 +3,9 @@ import Combine
 import UIKit
 
 struct AdConfig {
-    static let appID = "ca-app-pub-1890131120074298~3101816142"
-    static let bannerID = "ca-app-pub-1890131120074298/5344836105"
-    static let interstitialID = "ca-app-pub-1890131120074298/9092509421"
+    static let appID = "ca-app-pub-6901246177430455~1551920935"
+    static let bannerID = "ca-app-pub-6901246177430455/4458227825"
+    static let interstitialID = "ca-app-pub-6901246177430455/9930046357"
 }
 
 #if canImport(GoogleMobileAds)
