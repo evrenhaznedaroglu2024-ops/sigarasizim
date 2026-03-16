@@ -1,21 +1,35 @@
 import SwiftUI
 import UIKit
 
-#if canImport(GoogleMobileAds)
-import GoogleMobileAds
+#if canImport(YandexMobileAds)
+import YandexMobileAds
 
 struct BannerAdView: UIViewRepresentable {
     let adUnitID: String
 
-    func makeUIView(context: Context) -> BannerView {
-        let banner = BannerView(adSize: AdSizeBanner)
-        banner.adUnitID = adUnitID
-        banner.rootViewController = UIApplication.shared.topViewController()
-        banner.load(Request())
+    func makeUIView(context: Context) -> AdView {
+        let adSize = BannerAdSize.fixedSize(with: CGSize(width: 320, height: 50))
+        let banner = AdView(adUnitID: adUnitID, adSize: adSize)
+        banner.delegate = context.coordinator
+        banner.loadAd()
         return banner
     }
 
-    func updateUIView(_ uiView: BannerView, context: Context) {}
+    func updateUIView(_ uiView: AdView, context: Context) {}
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator()
+    }
+
+    class Coordinator: NSObject, AdViewDelegate {
+        func adViewDidLoad(_ adView: AdView) {
+            print("Yandex Banner loaded")
+        }
+
+        func adViewDidFailToLoad(_ adView: AdView, error: AdRequestError) {
+            print("Yandex Banner failed to load: \(error.localizedDescription)")
+        }
+    }
 }
 #else
 struct BannerAdView: View {

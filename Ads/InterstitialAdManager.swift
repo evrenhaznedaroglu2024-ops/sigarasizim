@@ -3,18 +3,18 @@ import Combine
 import UIKit
 
 struct AdConfig {
-    static let appID = "ca-app-pub-6901246177430455~1551920935"
-    static let bannerID = "ca-app-pub-6901246177430455/4458227825"
-    static let interstitialID = "ca-app-pub-6901246177430455/9930046357"
+    static let bannerID = "demo-banner-yandex" // TODO: Replace with your Yandex Banner ID
+    static let interstitialID = "demo-interstitial-yandex" // TODO: Replace with your Yandex Interstitial ID
 }
 
-#if canImport(GoogleMobileAds)
-import GoogleMobileAds
+#if canImport(YandexMobileAds)
+import YandexMobileAds
 
 final class InterstitialAdManager: NSObject, ObservableObject {
 
     @Published private(set) var isReady = false
-    private var interstitial: InterstitialAd?
+    private var interstitialAd: InterstitialAd?
+    private var adLoader: InterstitialAdLoader?
 
     private let adUnitID = AdConfig.interstitialID
 
@@ -24,24 +24,52 @@ final class InterstitialAdManager: NSObject, ObservableObject {
     }
 
     func load() {
-        let request = Request()
-        InterstitialAd.load(with: adUnitID, request: request) { [weak self] ad, _ in
-            guard let self else { return }
-            DispatchQueue.main.async {
-                self.interstitial = ad
-                self.isReady = (ad != nil)
-            }
-        }
+        let loader = InterstitialAdLoader()
+        loader.delegate = self
+        self.adLoader = loader
+        
+        let configuration = AdRequestConfiguration(adUnitID: adUnitID)
+        loader.loadAd(with: configuration)
     }
 
     func show() {
-        guard let ad = interstitial,
+        guard let ad = interstitialAd,
               let vc = UIApplication.shared.topViewController()
-        else { load(); return }
+        else { 
+            load()
+            return 
+        }
 
-        ad.present(from: vc)
-        interstitial = nil
+        ad.delegate = self
+        ad.show(from: vc)
+        interstitialAd = nil
         isReady = false
+    }
+}
+
+extension InterstitialAdManager: InterstitialAdLoaderDelegate {
+    func interstitialAdLoader(_ adLoader: InterstitialAdLoader, didLoad interstitialAd: InterstitialAd) {
+        DispatchQueue.main.async {
+            self.interstitialAd = interstitialAd
+            self.isReady = true
+        }
+    }
+
+    func interstitialAdLoader(_ adLoader: InterstitialAdLoader, didFailToLoadWithError error: AdRequestError) {
+        print("Yandex Interstitial failed to load: \(error.localizedDescription)")
+        DispatchQueue.main.async {
+            self.isReady = false
+        }
+    }
+}
+
+extension InterstitialAdManager: InterstitialAdDelegate {
+    func interstitialAd(_ interstitialAd: InterstitialAd, didFailToShowWithError error: Error) {
+        print("Yandex Interstitial failed to show: \(error.localizedDescription)")
+        load()
+    }
+
+    func interstitialAdDidDismiss(_ interstitialAd: InterstitialAd) {
         load()
     }
 }

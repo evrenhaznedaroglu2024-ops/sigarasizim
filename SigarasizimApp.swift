@@ -25,8 +25,8 @@ struct SigarasizimApp: App {
         if #available(iOS 14, *) {
             ATTrackingManager.requestTrackingAuthorization { status in
                 DispatchQueue.main.async {
-                    // Initialize AdMob regardless of status, it handles consent internally or runs non-personalized
-                    AdMobManager.shared.start()
+                    // Initialize Yandex Ads regardless of status, it handles consent internally or runs non-personalized
+                    YandexAdsManager.shared.start()
                     
                     switch status {
                     case .authorized:
@@ -43,7 +43,7 @@ struct SigarasizimApp: App {
                 }
             }
         } else {
-            AdMobManager.shared.start()
+            YandexAdsManager.shared.start()
         }
     }
 }

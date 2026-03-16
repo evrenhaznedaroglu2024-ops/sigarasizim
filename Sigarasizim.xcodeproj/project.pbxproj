@@ -19,11 +19,11 @@
 		E428AA7E2F1C342B00D72175 /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428AA702F1C342B00D72175 /* HealthView.swift */; };
 		E428AA7F2F1C342B00D72175 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428AA722F1C342B00D72175 /* SettingsView.swift */; };
 		E428AA802F1C342B00D72175 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428AA712F1C342B00D72175 /* RootTabView.swift */; };
-		E428AA812F1C342B00D72175 /* AdMobManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428AA602F1C342B00D72175 /* AdMobManager.swift */; };
+		E428AA812F1C342B00D72175 /* YandexAdsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428AA602F1C342B00D72175 /* YandexAdsManager.swift */; };
 		E428AA822F1C342B00D72175 /* QuitSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428AA642F1C342B00D72175 /* QuitSession.swift */; };
 		E428AA832F1C342B00D72175 /* StatsCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428AA6A2F1C342B00D72175 /* StatsCalculator.swift */; };
 		E428AA842F1C342B00D72175 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428AA6E2F1C342B00D72175 /* AchievementsView.swift */; };
-		E43F6E342F1C50070097DB64 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = E43F6E332F1C50070097DB64 /* GoogleMobileAds */; };
+		E43F6E342F1C50070097DB64 /* YandexMobileAdsPackage in Frameworks */ = {isa = PBXBuildFile; productRef = E43F6E332F1C50070097DB64 /* YandexMobileAdsPackage */; };
 		E48A2AD32F1D8ECA00D6797F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48A2AD22F1D8ECA00D6797F /* Assets.xcassets */; };
 		F4D3274397320A944D007728 /* SigarasizimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3294BEF7B95A951335AF4 /* SigarasizimApp.swift */; };
 /* End PBXBuildFile section */
@@ -31,7 +31,7 @@
 /* Begin PBXFileReference section */
 		6BB3294BEF7B95A951335AF4 /* SigarasizimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigarasizimApp.swift; sourceTree = "<group>"; };
 		E428AA522F1C329200D72175 /* Sigarasizim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sigarasizim.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E428AA602F1C342B00D72175 /* AdMobManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobManager.swift; sourceTree = "<group>"; };
+		E428AA602F1C342B00D72175 /* YandexAdsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexAdsManager.swift; sourceTree = "<group>"; };
 		E428AA612F1C342B00D72175 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		E428AA622F1C342B00D72175 /* InterstitialAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdManager.swift; sourceTree = "<group>"; };
 		E428AA642F1C342B00D72175 /* QuitSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitSession.swift; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E43F6E342F1C50070097DB64 /* GoogleMobileAds in Frameworks */,
+				E43F6E342F1C50070097DB64 /* YandexMobileAdsPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 		E428AA632F1C342B00D72175 /* Ads */ = {
 			isa = PBXGroup;
 			children = (
-				E428AA602F1C342B00D72175 /* AdMobManager.swift */,
+				E428AA602F1C342B00D72175 /* YandexAdsManager.swift */,
 				E428AA612F1C342B00D72175 /* BannerAdView.swift */,
 				E428AA622F1C342B00D72175 /* InterstitialAdManager.swift */,
 			);
@@ -160,7 +160,7 @@
 			);
 			name = Sigarasizim;
 			packageProductDependencies = (
-				E43F6E332F1C50070097DB64 /* GoogleMobileAds */,
+				E43F6E332F1C50070097DB64 /* YandexMobileAdsPackage */,
 			);
 			productName = Sigarasizim;
 			productReference = E428AA522F1C329200D72175 /* Sigarasizim.app */;
@@ -191,7 +191,7 @@
 			mainGroup = E428AA492F1C329200D72175;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				E428AA882F1C3A1E00D72175 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				E428AA882F1C3A1E00D72175 /* XCRemoteSwiftPackageReference "yandex-ads-sdk-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E428AA532F1C329200D72175 /* Products */;
@@ -391,7 +391,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.idakimi.Sigarasizim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -428,7 +432,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.idakimi.Sigarasizim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -465,21 +473,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E428AA882F1C3A1E00D72175 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+		E428AA882F1C3A1E00D72175 /* XCRemoteSwiftPackageReference "yandex-ads-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			repositoryURL = "https://github.com/yandexmobile/yandex-ads-sdk-ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 12.14.0;
+				minimumVersion = 7.18.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E43F6E332F1C50070097DB64 /* GoogleMobileAds */ = {
+		E43F6E332F1C50070097DB64 /* YandexMobileAdsPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E428AA882F1C3A1E00D72175 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
-			productName = GoogleMobileAds;
+			package = E428AA882F1C3A1E00D72175 /* XCRemoteSwiftPackageReference "yandex-ads-sdk-ios" */;
+			productName = YandexMobileAdsPackage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

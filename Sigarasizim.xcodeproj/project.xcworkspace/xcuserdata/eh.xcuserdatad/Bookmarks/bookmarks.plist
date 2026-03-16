@@ -10,15 +10,15 @@
 				<key>location-parameters</key>
 				<dict>
 					<key>EndingColumnNumber</key>
-					<string>57</string>
+					<string>45</string>
 					<key>EndingLineNumber</key>
 					<string>12</string>
 					<key>StartingColumnNumber</key>
-					<string>57</string>
+					<string>45</string>
 					<key>StartingLineNumber</key>
 					<string>12</string>
 					<key>Timestamp</key>
-					<string>790421340.980979</string>
+					<string>795378412.396462</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -36,12 +36,12 @@
 				<key>focused</key>
 				<string></string>
 				<key>leading</key>
-				<string>        let banner = BannerView(adSize: AdSizeBanner)
-        banner.adUnitID = adUnitID
-        banner.rootViewController = UIApplication.shared.</string>
+				<string>        let adSize = BannerAdSize.fixedSize(with: CGSize(width: 320, height: 50))
+        let banner = AdView(adUnitID: adUnitID, adSize: adSize)
+        banner.delegate = context.coordinator</string>
 				<key>trailing</key>
-				<string>topViewController()
-        banner.load(Request())
+				<string>
+        banner.loadAd()
         return banner
 </string>
 			</dict>
