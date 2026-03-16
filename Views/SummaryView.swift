@@ -146,7 +146,9 @@ struct SummaryView: View {
                 }
             }
             .sheet(isPresented: $showSettings) {
-                SettingsView()
+                if #available(iOS 17.0, *) {
+                    SettingsView()
+                }
             }
         }
     }
