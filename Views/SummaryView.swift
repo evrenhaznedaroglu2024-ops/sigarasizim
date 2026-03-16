@@ -136,21 +136,17 @@ struct SummaryView: View {
             .navigationTitle(Localization.shared.string("summary_title", for: store.settings.language))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                if #available(iOS 17.0, *) {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button {
-                            showSettings = true
-                        } label: {
-                            Image(systemName: "gearshape.fill")
-                                .tint(AppTheme.textPrimary)
-                        }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        showSettings = true
+                    } label: {
+                        Image(systemName: "gearshape.fill")
+                            .tint(AppTheme.textPrimary)
                     }
                 }
             }
             .sheet(isPresented: $showSettings) {
-                if #available(iOS 17.0, *) {
-                    SettingsView()
-                }
+                SettingsView()
             }
         }
     }

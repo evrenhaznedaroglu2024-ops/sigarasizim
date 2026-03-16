@@ -26,7 +26,7 @@ struct BannerAdView: UIViewRepresentable {
             print("Yandex Banner loaded")
         }
 
-        func adViewDidFailToLoad(_ adView: AdView, error: AdRequestError) {
+        func adViewDidFailLoading(_ adView: AdView, error: AdRequestError) {
             print("Yandex Banner failed to load: \(error.error.localizedDescription)")
         }
     }
