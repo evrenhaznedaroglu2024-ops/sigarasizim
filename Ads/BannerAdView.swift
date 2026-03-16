@@ -8,7 +8,7 @@ struct BannerAdView: UIViewRepresentable {
     let adUnitID: String
 
     func makeUIView(context: Context) -> AdView {
-        let adSize = BannerAdSize.fixedSize(with: CGSize(width: 320, height: 50))
+        let adSize = BannerAdSize.fixedSize(withWidth: 320, height: 50)
         let banner = AdView(adUnitID: adUnitID, adSize: adSize)
         banner.delegate = context.coordinator
         banner.loadAd()
@@ -27,7 +27,7 @@ struct BannerAdView: UIViewRepresentable {
         }
 
         func adViewDidFailToLoad(_ adView: AdView, error: AdRequestError) {
-            print("Yandex Banner failed to load: \(error.localizedDescription)")
+            print("Yandex Banner failed to load: \(error.error.localizedDescription)")
         }
     }
 }

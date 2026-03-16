@@ -56,7 +56,7 @@ extension InterstitialAdManager: InterstitialAdLoaderDelegate {
     }
 
     func interstitialAdLoader(_ adLoader: InterstitialAdLoader, didFailToLoadWithError error: AdRequestError) {
-        print("Yandex Interstitial failed to load: \(error.localizedDescription)")
+        print("Yandex Interstitial failed to load: \(error.error.localizedDescription)")
         DispatchQueue.main.async {
             self.isReady = false
         }

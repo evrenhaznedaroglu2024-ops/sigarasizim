@@ -23,7 +23,7 @@
 		E428AA822F1C342B00D72175 /* QuitSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428AA642F1C342B00D72175 /* QuitSession.swift */; };
 		E428AA832F1C342B00D72175 /* StatsCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428AA6A2F1C342B00D72175 /* StatsCalculator.swift */; };
 		E428AA842F1C342B00D72175 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428AA6E2F1C342B00D72175 /* AchievementsView.swift */; };
-		E43F6E342F1C50070097DB64 /* YandexMobileAdsPackage in Frameworks */ = {isa = PBXBuildFile; productRef = E43F6E332F1C50070097DB64 /* YandexMobileAdsPackage */; };
+		E43F6E342F1C50070097DB64 /* YandexMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = E43F6E332F1C50070097DB64 /* YandexMobileAds */; };
 		E48A2AD32F1D8ECA00D6797F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48A2AD22F1D8ECA00D6797F /* Assets.xcassets */; };
 		F4D3274397320A944D007728 /* SigarasizimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3294BEF7B95A951335AF4 /* SigarasizimApp.swift */; };
 /* End PBXBuildFile section */
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E43F6E342F1C50070097DB64 /* YandexMobileAdsPackage in Frameworks */,
+				E43F6E342F1C50070097DB64 /* YandexMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +160,7 @@
 			);
 			name = Sigarasizim;
 			packageProductDependencies = (
-				E43F6E332F1C50070097DB64 /* YandexMobileAdsPackage */,
+				E43F6E332F1C50070097DB64 /* YandexMobileAds */,
 			);
 			productName = Sigarasizim;
 			productReference = E428AA522F1C329200D72175 /* Sigarasizim.app */;
@@ -484,10 +484,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E43F6E332F1C50070097DB64 /* YandexMobileAdsPackage */ = {
+		E43F6E332F1C50070097DB64 /* YandexMobileAds */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E428AA882F1C3A1E00D72175 /* XCRemoteSwiftPackageReference "yandex-ads-sdk-ios" */;
-			productName = YandexMobileAdsPackage;
+			productName = YandexMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

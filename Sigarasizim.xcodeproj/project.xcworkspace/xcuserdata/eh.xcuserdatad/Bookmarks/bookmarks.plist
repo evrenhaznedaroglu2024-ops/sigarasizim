@@ -36,7 +36,7 @@
 				<key>focused</key>
 				<string></string>
 				<key>leading</key>
-				<string>        let adSize = BannerAdSize.fixedSize(with: CGSize(width: 320, height: 50))
+				<string>        let adSize = BannerAdSize.fixedSize(withWidth: 320, height: 50)
         let banner = AdView(adUnitID: adUnitID, adSize: adSize)
         banner.delegate = context.coordinator</string>
 				<key>trailing</key>
