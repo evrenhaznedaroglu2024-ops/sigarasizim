@@ -2,11 +2,14 @@ import SwiftUI
 import AppTrackingTransparency
 import AdSupport
 
+#if canImport(GoogleMobileAds)
+import GoogleMobileAds
+#endif
+
 @main
 struct SigarasizimApp: App {
     @StateObject private var store = AppStore()
     @Environment(\.scenePhase) private var scenePhase
-
 
     var body: some Scene {
         WindowGroup {
@@ -25,8 +28,9 @@ struct SigarasizimApp: App {
         if #available(iOS 14, *) {
             ATTrackingManager.requestTrackingAuthorization { status in
                 DispatchQueue.main.async {
-                    // Initialize Yandex Ads regardless of status, it handles consent internally or runs non-personalized
-                    YandexAdsManager.shared.start()
+                    #if canImport(GoogleMobileAds)
+                    GADMobileAds.sharedInstance().start(completionHandler: nil)
+                    #endif
                     
                     switch status {
                     case .authorized:
@@ -43,7 +47,9 @@ struct SigarasizimApp: App {
                 }
             }
         } else {
-            YandexAdsManager.shared.start()
+            #if canImport(GoogleMobileAds)
+            GADMobileAds.sharedInstance().start(completionHandler: nil)
+            #endif
         }
     }
 }

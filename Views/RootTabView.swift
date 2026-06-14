@@ -9,7 +9,7 @@ struct RootTabView: View {
                 .tabItem { Label(Localization.shared.string("tab_summary", for: store.settings.language), systemImage: "chart.bar.fill") }
 
             HealthView()
-                .tabItem { Label(Localization.shared.string("tab_health", for: store.settings.language), systemImage: "heart.fill") }
+                .tabItem { Label(Localization.shared.string("tab_health", for: store.settings.language), systemImage: "chart.line.uptrend.xyaxis") }
 
             AchievementsView()
                 .tabItem { Label(Localization.shared.string("tab_achievements", for: store.settings.language), systemImage: "medal.fill") }

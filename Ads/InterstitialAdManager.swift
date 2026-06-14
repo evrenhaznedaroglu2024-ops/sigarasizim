@@ -3,18 +3,16 @@ import Combine
 import UIKit
 
 struct AdConfig {
-    static let bannerID = "demo-banner-yandex" // TODO: Replace with your Yandex Banner ID
-    static let interstitialID = "demo-interstitial-yandex" // TODO: Replace with your Yandex Interstitial ID
+    static let bannerID = "ca-app-pub-3280740911723004/7320658212"
+    static let interstitialID = "ca-app-pub-3280740911723004/6007576547"
 }
 
-#if canImport(YandexMobileAds)
-import YandexMobileAds
+#if canImport(GoogleMobileAds)
+import GoogleMobileAds
 
-final class InterstitialAdManager: NSObject, ObservableObject {
-
+final class InterstitialAdManager: NSObject, ObservableObject, GADFullScreenContentDelegate {
     @Published private(set) var isReady = false
-    private var interstitialAd: InterstitialAd?
-    private var adLoader: InterstitialAdLoader?
+    private var interstitial: GADInterstitialAd?
 
     private let adUnitID = AdConfig.interstitialID
 
@@ -24,56 +22,44 @@ final class InterstitialAdManager: NSObject, ObservableObject {
     }
 
     func load() {
-        let loader = InterstitialAdLoader()
-        loader.delegate = self
-        self.adLoader = loader
-        
-        let configuration = AdRequestConfiguration(adUnitID: adUnitID)
-        loader.loadAd(with: configuration)
+        let request = GADRequest()
+        GADInterstitialAd.load(withAdUnitID: adUnitID,
+                               request: request,
+                               completionHandler: { [weak self] ad, error in
+            guard let self = self else { return }
+            if let error = error {
+                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                DispatchQueue.main.async { self.isReady = false }
+                return
+            }
+            self.interstitial = ad
+            self.interstitial?.fullScreenContentDelegate = self
+            DispatchQueue.main.async { self.isReady = true }
+        })
     }
 
     func show() {
-        guard let ad = interstitialAd,
+        guard let ad = interstitial,
               let vc = UIApplication.shared.topViewController()
-        else { 
+        else {
             load()
-            return 
+            return
         }
 
-        ad.delegate = self
-        ad.show(from: vc)
-        interstitialAd = nil
+        ad.present(fromRootViewController: vc)
         isReady = false
     }
-}
 
-extension InterstitialAdManager: InterstitialAdLoaderDelegate {
-    func interstitialAdLoader(_ adLoader: InterstitialAdLoader, didLoad interstitialAd: InterstitialAd) {
-        DispatchQueue.main.async {
-            self.interstitialAd = interstitialAd
-            self.isReady = true
-        }
-    }
-
-    func interstitialAdLoader(_ adLoader: InterstitialAdLoader, didFailToLoadWithError error: AdRequestError) {
-        print("Yandex Interstitial failed to load: \(error.error.localizedDescription)")
-        DispatchQueue.main.async {
-            self.isReady = false
-        }
-    }
-}
-
-extension InterstitialAdManager: InterstitialAdDelegate {
-    func interstitialAd(_ interstitialAd: InterstitialAd, didFailToShowWithError error: Error) {
-        print("Yandex Interstitial failed to show: \(error.localizedDescription)")
+    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        print("Ad did fail to present full screen content.")
         load()
     }
 
-    func interstitialAdDidDismiss(_ interstitialAd: InterstitialAd) {
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad did dismiss full screen content.")
         load()
     }
 }
-
 #else
 final class InterstitialAdManager: NSObject, ObservableObject {
     @Published private(set) var isReady = false

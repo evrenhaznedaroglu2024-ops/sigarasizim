@@ -14,22 +14,22 @@ enum HealthTimelineProvider {
             .init(minutesFromStart: 20,
                   title: Localization.shared.string("health_pulse_title", for: language),
                   detail: Localization.shared.string("health_pulse_detail", for: language),
-                  icon: "heart.fill"),
+                  icon: "waveform.path.ecg.rectangle"),
             
             .init(minutesFromStart: 8 * 60,
                   title: Localization.shared.string("health_oxygen_title", for: language),
                   detail: Localization.shared.string("health_oxygen_detail", for: language),
-                  icon: "lungs.fill"),
+                  icon: "wind"),
             
             .init(minutesFromStart: 24 * 60,
                   title: Localization.shared.string("health_heart_attack_title", for: language),
                   detail: Localization.shared.string("health_heart_attack_detail", for: language),
-                  icon: "bolt.heart.fill"),
+                  icon: "heart.text.square"),
             
             .init(minutesFromStart: 48 * 60,
                   title: Localization.shared.string("health_taste_smell_title", for: language),
                   detail: Localization.shared.string("health_taste_smell_detail", for: language),
-                  icon: "nose.fill"),
+                  icon: "sparkles"),
             
             .init(minutesFromStart: 72 * 60,
                   title: Localization.shared.string("health_energy_title", for: language),
@@ -44,22 +44,22 @@ enum HealthTimelineProvider {
             .init(minutesFromStart: 9 * 30 * 24 * 60,
                   title: Localization.shared.string("health_lung_clean_title", for: language),
                   detail: Localization.shared.string("health_lung_clean_detail", for: language),
-                  icon: "allergens.fill"),
+                  icon: "leaf.fill"),
             
             .init(minutesFromStart: 365 * 24 * 60,
                   title: Localization.shared.string("health_heart_health_title", for: language),
                   detail: Localization.shared.string("health_heart_health_detail", for: language),
-                  icon: "heart.circle.fill"),
+                  icon: "figure.walk.circle.fill"),
             
             .init(minutesFromStart: 5 * 365 * 24 * 60,
                   title: Localization.shared.string("health_stroke_title", for: language),
                   detail: Localization.shared.string("health_stroke_detail", for: language),
-                  icon: "brain.head.profile"),
+                  icon: "calendar.badge.clock"),
             
             .init(minutesFromStart: 10 * 365 * 24 * 60,
                   title: Localization.shared.string("health_cancer_title", for: language),
                   detail: Localization.shared.string("health_cancer_detail", for: language),
-                  icon: "staroflife.fill")
+                  icon: "calendar")
         ]
     }
 

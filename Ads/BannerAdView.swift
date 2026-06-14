@@ -1,39 +1,24 @@
 import SwiftUI
 import UIKit
 
-#if canImport(YandexMobileAds)
-import YandexMobileAds
+#if canImport(GoogleMobileAds)
+import GoogleMobileAds
 
 struct BannerAdView: UIViewRepresentable {
     let adUnitID: String
 
-    func makeUIView(context: Context) -> AdView {
-        let adSize = BannerAdSize.fixedSize(withWidth: 320, height: 50)
-        let banner = AdView(adUnitID: adUnitID, adSize: adSize)
-        banner.delegate = context.coordinator
-        banner.loadAd()
+    func makeUIView(context: Context) -> GADBannerView {
+        let banner = GADBannerView(adSize: GADAdSizeBanner)
+        banner.adUnitID = adUnitID
+        
+        let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        banner.rootViewController = scene?.windows.first?.rootViewController
+        
+        banner.load(GADRequest())
         return banner
     }
 
-    func updateUIView(_ uiView: AdView, context: Context) {}
-
-    func makeCoordinator() -> Coordinator {
-        Coordinator()
-    }
-
-    class Coordinator: NSObject, AdViewDelegate {
-        func adViewDidLoad(_ adView: AdView) {
-            print("Yandex Banner loaded")
-        }
-
-        func adViewDidFailLoading(_ adView: AdView, error: Error) {
-            if let adRequestError = error as? AdRequestError {
-                print("Yandex Banner failed to load: \(adRequestError.error.localizedDescription)")
-            } else {
-                print("Yandex Banner failed to load: \(error.localizedDescription)")
-            }
-        }
-    }
+    func updateUIView(_ uiView: GADBannerView, context: Context) {}
 }
 #else
 struct BannerAdView: View {
@@ -44,19 +29,17 @@ struct BannerAdView: View {
             .overlay(
                 HStack(spacing: 8) {
                     Image(systemName: "megaphone")
-                    Text("Reklam alanı (SDK yok)")
+                    Text("AdMob Banner (SDK Bekleniyor)")
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                 }
             )
-            .frame(height: 60)
+            .frame(height: 50)
     }
 }
 #endif
 
-
 // MARK: - UIApplication Extension
-// Added here because Extensions/UIApplication+TopViewController.swift is missing from Target
 extension UIApplication {
     public func topViewController(base: UIViewController? = nil) -> UIViewController? {
         let baseVC: UIViewController? = {

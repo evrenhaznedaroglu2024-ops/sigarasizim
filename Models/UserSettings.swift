@@ -42,7 +42,7 @@ class Localization {
     private let trStrings: [String: String] = [
         // Tab Bar
         "tab_summary": "Özet",
-        "tab_health": "Sağlık",
+        "tab_health": "İlerleme",
         "tab_achievements": "Kazanımlar",
         "tab_breath": "Nefes",
         "tab_settings": "Ayarlar",
@@ -67,8 +67,8 @@ class Localization {
         "unit_day": "gün",
         
         // Health View
-        "health_title": "Sağlık",
-        "health_body_healing": "Vücudun İyileşiyor",
+        "health_title": "İlerleme",
+        "health_body_healing": "Genel Bilgilendirici Kilometre Taşları",
         "health_smoke_free_duration": "Sigarasız geçen süre: ",
         "health_completed": "Tamamlandı",
         "health_remaining": "kaldı",
@@ -109,26 +109,26 @@ class Localization {
         "notification_body": "Bugün de sigarasız bir gün için harika bir fırsat.",
 
         // Health Milestones
-        "health_pulse_title": "Nabız ve Tansiyon",
-        "health_pulse_detail": "Nabız ve kan basıncı normal seviyelere düşmeye başlar.",
-        "health_oxygen_title": "Oksijen Seviyesi",
-        "health_oxygen_detail": "Kandaki oksijen seviyesi normale döner, karbonmonoksit azalır.",
-        "health_heart_attack_title": "Kalp Krizi Riski",
-        "health_heart_attack_detail": "Kalp krizi geçirme riski azalmaya başlar.",
+        "health_pulse_title": "Dolaşım Desteği",
+        "health_pulse_detail": "Sigara bırakıldıktan sonra dolaşımla ilgili bazı göstergelerde kişiye göre değişen olumlu değişimler görülebilir.",
+        "health_oxygen_title": "Oksijen ve Karbonmonoksit",
+        "health_oxygen_detail": "Karbonmonoksit düzeyleri zamanla azalabilir; değişim hızı kişisel sağlık durumuna göre farklılık gösterebilir.",
+        "health_heart_attack_title": "Kalp Sağlığı Bilgisi",
+        "health_heart_attack_detail": "Sigarayı bırakmak kalp sağlığını destekleyen önemli bir adımdır; bu ekran kişisel risk hesabı yapmaz.",
         "health_taste_smell_title": "Tat ve Koku",
-        "health_taste_smell_detail": "Sinir uçları iyileşir, tat ve koku alma duyusu gelişir.",
+        "health_taste_smell_detail": "Tat ve koku algısında zamanla kişiye göre değişen olumlu değişimler fark edilebilir.",
         "health_energy_title": "Enerji Artışı",
-        "health_energy_detail": "Bronşlar gevşer, nefes almak kolaylaşır ve enerji artar.",
+        "health_energy_detail": "Bazı kişiler nefes alma ve günlük enerji konusunda zamanla olumlu değişimler hissedebilir.",
         "health_circulation_title": "Dolaşım Sistemi",
-        "health_circulation_detail": "Kan dolaşımı iyileşir, yürümek ve koşmak kolaylaşır.",
-        "health_lung_clean_title": "Akciğer Temizliği",
-        "health_lung_clean_detail": "Öksürük, tıkanıklık ve nefes darlığı azalır. Akciğer enfeksiyon riski düşer.",
+        "health_circulation_detail": "Dolaşım ve hareket konforuyla ilgili değişimler zaman içinde kişiden kişiye farklılık gösterebilir.",
+        "health_lung_clean_title": "Solunum Bilgisi",
+        "health_lung_clean_detail": "Öksürük, tıkanıklık veya nefes darlığı gibi belirtiler için bu uygulama değerlendirme yapmaz; şikayetlerde doktora başvurun.",
         "health_heart_health_title": "Kalp Sağlığı",
-        "health_heart_health_detail": "Koroner kalp hastalığı riski, sigara içen birine göre yarıya iner.",
-        "health_stroke_title": "İnme Riski",
-        "health_stroke_detail": "İnme riski, sigara içmeyen bir insan seviyesine iner.",
-        "health_cancer_title": "Akciğer Kanseri",
-        "health_cancer_detail": "Akciğer kanseri riski sigara içenlere göre yarıya düşer.",
+        "health_heart_health_detail": "Uzun süre sigarasız kalmak kalp sağlığı açısından faydalı kabul edilir; kişisel hastalık riski hesaplanmaz.",
+        "health_stroke_title": "Uzun Vadeli Fayda",
+        "health_stroke_detail": "Sigarasız kalmanın uzun vadeli sağlık faydaları olabilir; bu bilgi kişisel tanı veya risk değerlendirmesi değildir.",
+        "health_cancer_title": "Uzun Vadeli Bilgi",
+        "health_cancer_detail": "Sigarayı bırakmak uzun vadeli sağlık açısından olumlu bir adımdır; kanser taraması veya risk ölçümü yapmaz.",
         
         // Achievements
         "ach_6_hours": "6 Saat",
@@ -138,7 +138,7 @@ class Localization {
         "ach_1_day": "1 Gün",
         "ach_1_day_detail": "24 saat sigarasız geçti.",
         "ach_3_days": "3 Gün",
-        "ach_3_days_detail": "Nikotin vücuttan atıldı.",
+        "ach_3_days_detail": "Nikotin düzeyi zamanla azalır; süreç kişiden kişiye değişebilir.",
         "ach_1_week": "1 Hafta",
         "ach_1_week_detail": "Bir haftayı tamamladın, harika!",
         "ach_2_weeks": "2 Hafta",
@@ -146,7 +146,7 @@ class Localization {
         "ach_1_month": "1 Ay",
         "ach_1_month_detail": "Bir aydır sigara içmiyorsun!",
         "ach_3_months": "3 Ay",
-        "ach_3_months_detail": "Akciğer kapasiten artıyor.",
+        "ach_3_months_detail": "Nefes ve kondisyon algın zamanla değişebilir.",
         "ach_6_months": "6 Ay",
         "ach_6_months_detail": "Yarım yıl oldu, inanamıyorum!",
         "ach_1_year": "1 Yıl",
@@ -155,7 +155,7 @@ class Localization {
         "ach_money_saver_detail": "500 ₺ tasarruf ettin.",
         
         // Medical Disclaimer
-        "medical_disclaimer": "Bu uygulamadaki bilgiler sadece bilgilendirme amaçlıdır ve tıbbi tavsiye niteliği taşımaz. Herhangi bir tıbbi karar vermeden önce lütfen bir doktora danışın.",
+        "medical_disclaimer": "Bu uygulama yalnızca sigarasız geçen süre, tahmini tasarruf ve genel bilgilendirici kilometre taşlarını gösterir. Tanı, tedavi, hastalık önleme, kişisel risk ölçümü veya tıbbi izleme amacı taşımaz. Sağlıkla ilgili kararlar ve şikayetler için lütfen doktora danışın.",
         "medical_source_title": "Kaynak: Dünya Sağlık Örgütü (WHO)",
         "medical_source_url": "https://www.who.int/news-room/questions-and-answers/item/tobacco-health-benefits-of-smoking-cessation"
     ]
@@ -163,7 +163,7 @@ class Localization {
     private let enStrings: [String: String] = [
         // Tab Bar
         "tab_summary": "Summary",
-        "tab_health": "Health",
+        "tab_health": "Progress",
         "tab_achievements": "Achievements",
         "tab_breath": "Breath",
         "tab_settings": "Settings",
@@ -188,33 +188,33 @@ class Localization {
         "unit_day": "days",
         
         // Health View
-        "health_title": "Health",
-        "health_body_healing": "Body Healing",
+        "health_title": "Progress",
+        "health_body_healing": "General Informational Milestones",
         "health_smoke_free_duration": "Smoke-free duration: ",
         "health_completed": "Completed",
         "health_remaining": "left",
         
         // Health Milestones
-        "health_pulse_title": "Pulse & Blood Pressure",
-        "health_pulse_detail": "Pulse and blood pressure drop to normal levels.",
-        "health_oxygen_title": "Oxygen Level",
-        "health_oxygen_detail": "Oxygen level in blood returns to normal, CO level drops.",
-        "health_heart_attack_title": "Heart Attack Risk",
-        "health_heart_attack_detail": "Risk of heart attack begins to decrease.",
+        "health_pulse_title": "Circulation Support",
+        "health_pulse_detail": "After quitting smoking, some circulation-related indicators may improve over time and vary by person.",
+        "health_oxygen_title": "Oxygen and Carbon Monoxide",
+        "health_oxygen_detail": "Carbon monoxide levels may decrease over time; the pace can vary based on personal health factors.",
+        "health_heart_attack_title": "Heart Health Information",
+        "health_heart_attack_detail": "Quitting smoking supports heart health; this app does not calculate personal risk.",
         "health_taste_smell_title": "Taste & Smell",
-        "health_taste_smell_detail": "Nerve endings start to regrow, sense of smell/taste improves.",
+        "health_taste_smell_detail": "Taste and smell perception may change positively over time and vary by person.",
         "health_energy_title": "Energy Boost",
-        "health_energy_detail": "Bronchial tubes relax, breathing becomes easier.",
+        "health_energy_detail": "Some people may notice changes in breathing comfort and daily energy over time.",
         "health_circulation_title": "Circulation",
-        "health_circulation_detail": "Blood circulation starts to improve.",
-        "health_lung_clean_title": "Lung Cleaning",
-        "health_lung_clean_detail": "Coughing and shortness of breath decrease.",
+        "health_circulation_detail": "Changes in circulation and movement comfort can vary from person to person.",
+        "health_lung_clean_title": "Respiratory Information",
+        "health_lung_clean_detail": "The app does not assess cough, congestion or shortness of breath. Please consult a doctor for symptoms.",
         "health_heart_health_title": "Heart Health",
-        "health_heart_health_detail": "Risk of coronary heart disease is half that of a smoker.",
-        "health_stroke_title": "Stroke Risk",
-        "health_stroke_detail": "Risk of stroke is reduced to that of a non-smoker.",
-        "health_cancer_title": "Lung Cancer",
-        "health_cancer_detail": "Risk of lung cancer falls to about half that of a smoker.",
+        "health_heart_health_detail": "Staying smoke-free is generally considered beneficial for heart health; no personal disease risk is calculated.",
+        "health_stroke_title": "Long-Term Benefit",
+        "health_stroke_detail": "Remaining smoke-free may have long-term health benefits; this is not a personal diagnosis or risk assessment.",
+        "health_cancer_title": "Long-Term Information",
+        "health_cancer_detail": "Quitting smoking is a positive long-term health step; the app does not provide cancer screening or risk measurement.",
         
         // Breath Test View
         "breath_title": "Breath Exercise",
@@ -235,7 +235,7 @@ class Localization {
         "ach_1_day": "1 Day",
         "ach_1_day_detail": "24 hours without a cigarette.",
         "ach_3_days": "3 Days",
-        "ach_3_days_detail": "Nicotine is out of your system.",
+        "ach_3_days_detail": "Nicotine levels decrease over time; the process varies by person.",
         "ach_1_week": "1 Week",
         "ach_1_week_detail": "One week completed, amazing!",
         "ach_2_weeks": "2 Weeks",
@@ -243,7 +243,7 @@ class Localization {
         "ach_1_month": "1 Month",
         "ach_1_month_detail": "One month smoke free!",
         "ach_3_months": "3 Months",
-        "ach_3_months_detail": "Lung capacity is increasing.",
+        "ach_3_months_detail": "Your sense of breathing and fitness may change over time.",
         "ach_6_months": "6 Months",
         "ach_6_months_detail": "Half a year, unbelievable!",
         "ach_1_year": "1 Year",
@@ -275,7 +275,7 @@ class Localization {
         "notification_body": "Today is a great opportunity for a smoke-free day.",
         
         // Medical Disclaimer
-        "medical_disclaimer": "The information in this app is for informational purposes only and does not constitute medical advice. Please consult a doctor before making any medical decisions.",
+        "medical_disclaimer": "This app only shows smoke-free time, estimated savings and general informational milestones. It is not intended for diagnosis, treatment, disease prevention, personal risk measurement or medical monitoring. Please consult a doctor for health decisions or symptoms.",
         "medical_source_title": "Source: World Health Organization (WHO)",
         "medical_source_url": "https://www.who.int/news-room/questions-and-answers/item/tobacco-health-benefits-of-smoking-cessation"
     ]

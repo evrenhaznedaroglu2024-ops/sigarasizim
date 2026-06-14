@@ -1,0 +1,44 @@
+<svg width="1240" height="2208" viewBox="0 0 1240 2208" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="620" y1="0" x2="620" y2="2208" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FCF8"/>
+      <stop offset="1" stop-color="#E3F4EA"/>
+    </linearGradient>
+  </defs>
+  <rect width="1240" height="2208" fill="url(#bg2)"/>
+  <text x="620" y="120" text-anchor="middle" fill="#123325" font-size="64" font-weight="800" font-family="Helvetica, Arial, sans-serif">Watch your body recover</text>
+  <rect x="86" y="182" width="1068" height="1844" rx="72" fill="#0F2018"/>
+  <rect x="124" y="224" width="992" height="1760" rx="56" fill="#F6FBF7"/>
+  <rect x="176" y="286" width="888" height="224" rx="44" fill="#FFFFFF"/>
+  <text x="238" y="382" fill="#123325" font-size="60" font-weight="800" font-family="Helvetica, Arial, sans-serif">Health timeline</text>
+  <text x="238" y="446" fill="#5F7A6A" font-size="32" font-weight="500" font-family="Helvetica, Arial, sans-serif">Milestones show what improves after quitting.</text>
+  <g>
+    <rect x="176" y="552" width="888" height="236" rx="40" fill="#FFFFFF"/>
+    <circle cx="282" cy="670" r="58" fill="#DDF4E6"/>
+    <circle cx="282" cy="670" r="42" fill="#0B6E4F"/>
+    <text x="378" y="650" fill="#133427" font-size="34" font-weight="800" font-family="Helvetica, Arial, sans-serif">Pulse and blood pressure</text>
+    <text x="378" y="706" fill="#657F6F" font-size="28" font-weight="500" font-family="Helvetica, Arial, sans-serif">Start returning to healthier levels.</text>
+    <text x="900" y="670" fill="#0B6E4F" font-size="34" font-weight="800" font-family="Helvetica, Arial, sans-serif">100%</text>
+  </g>
+  <g>
+    <rect x="176" y="830" width="888" height="236" rx="40" fill="#FFFFFF"/>
+    <circle cx="282" cy="948" r="58" fill="#E6F8EE"/>
+    <circle cx="282" cy="948" r="42" fill="#26A17B"/>
+    <text x="378" y="928" fill="#133427" font-size="34" font-weight="800" font-family="Helvetica, Arial, sans-serif">Oxygen level</text>
+    <text x="378" y="984" fill="#657F6F" font-size="28" font-weight="500" font-family="Helvetica, Arial, sans-serif">Carbon monoxide drops, oxygen rises.</text>
+    <text x="900" y="948" fill="#0B6E4F" font-size="34" font-weight="800" font-family="Helvetica, Arial, sans-serif">100%</text>
+  </g>
+  <g>
+    <rect x="176" y="1108" width="888" height="236" rx="40" fill="#FFFFFF"/>
+    <circle cx="282" cy="1226" r="58" fill="#E9F7F0"/>
+    <circle cx="282" cy="1226" r="42" fill="#55BF9B"/>
+    <text x="378" y="1206" fill="#133427" font-size="34" font-weight="800" font-family="Helvetica, Arial, sans-serif">Taste and smell</text>
+    <text x="378" y="1262" fill="#657F6F" font-size="28" font-weight="500" font-family="Helvetica, Arial, sans-serif">Senses get sharper as recovery continues.</text>
+    <text x="900" y="1226" fill="#0B6E4F" font-size="34" font-weight="800" font-family="Helvetica, Arial, sans-serif">82%</text>
+  </g>
+  <g>
+    <rect x="176" y="1386" width="888" height="236" rx="40" fill="#0D6D4F"/>
+    <text x="236" y="1488" fill="#F8FFFB" font-size="50" font-weight="800" font-family="Helvetica, Arial, sans-serif">Clinically-inspired milestone view</text>
+    <text x="236" y="1548" fill="#D6F3E6" font-size="30" font-weight="500" font-family="Helvetica, Arial, sans-serif">Simple, calm and motivating day after day.</text>
+  </g>
+</svg>

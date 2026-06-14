@@ -1,0 +1,50 @@
+<svg width="1240" height="2208" viewBox="0 0 1240 2208" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg1" x1="620" y1="0" x2="620" y2="2208" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4FBF7"/>
+      <stop offset="1" stop-color="#E4F4EA"/>
+    </linearGradient>
+    <linearGradient id="hero1" x1="159" y1="238" x2="1081" y2="668" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C7354"/>
+      <stop offset="1" stop-color="#3CC092"/>
+    </linearGradient>
+  </defs>
+  <rect width="1240" height="2208" fill="url(#bg1)"/>
+  <text x="620" y="120" text-anchor="middle" fill="#123325" font-size="64" font-weight="800" font-family="Helvetica, Arial, sans-serif">Track every smoke-free win</text>
+  <rect x="86" y="182" width="1068" height="1844" rx="72" fill="#0F2018"/>
+  <rect x="124" y="224" width="992" height="1760" rx="56" fill="#F6FBF7"/>
+  <rect x="176" y="286" width="888" height="300" rx="46" fill="url(#hero1)"/>
+  <text x="238" y="388" fill="#F8FFFB" font-size="64" font-weight="800" font-family="Helvetica, Arial, sans-serif">Your journey</text>
+  <text x="238" y="458" fill="#DDF7EA" font-size="32" font-weight="500" font-family="Helvetica, Arial, sans-serif">See time, savings and motivation in one place.</text>
+  <rect x="238" y="502" width="262" height="64" rx="22" fill="#F8FFFB" fill-opacity="0.18"/>
+  <text x="270" y="544" fill="#F8FFFB" font-size="30" font-weight="700" font-family="Helvetica, Arial, sans-serif">142 days smoke-free</text>
+  <g>
+    <rect x="176" y="642" width="888" height="594" rx="42" fill="#FFFFFF"/>
+    <rect x="214" y="696" width="812" height="108" rx="28" fill="#EAF6EF"/>
+    <rect x="214" y="826" width="812" height="108" rx="28" fill="#EAF6EF"/>
+    <rect x="214" y="956" width="812" height="108" rx="28" fill="#EAF6EF"/>
+    <rect x="214" y="1086" width="812" height="108" rx="28" fill="#EAF6EF"/>
+    <text x="266" y="765" fill="#124835" font-size="26" font-weight="700" font-family="Helvetica, Arial, sans-serif">Smoke-free time</text>
+    <text x="846" y="765" fill="#0B6E4F" font-size="34" font-weight="800" font-family="Helvetica, Arial, sans-serif">142 d 6 h</text>
+    <text x="266" y="895" fill="#124835" font-size="26" font-weight="700" font-family="Helvetica, Arial, sans-serif">Cigarettes not smoked</text>
+    <text x="878" y="895" fill="#0B6E4F" font-size="34" font-weight="800" font-family="Helvetica, Arial, sans-serif">2840</text>
+    <text x="266" y="1025" fill="#124835" font-size="26" font-weight="700" font-family="Helvetica, Arial, sans-serif">Money saved</text>
+    <text x="842" y="1025" fill="#0B6E4F" font-size="34" font-weight="800" font-family="Helvetica, Arial, sans-serif">₺12.480</text>
+    <text x="266" y="1155" fill="#124835" font-size="26" font-weight="700" font-family="Helvetica, Arial, sans-serif">Time saved</text>
+    <text x="852" y="1155" fill="#0B6E4F" font-size="34" font-weight="800" font-family="Helvetica, Arial, sans-serif">237 h</text>
+  </g>
+  <g>
+    <rect x="176" y="1278" width="426" height="180" rx="34" fill="#FFFFFF"/>
+    <text x="220" y="1352" fill="#6A8375" font-size="26" font-weight="600" font-family="Helvetica, Arial, sans-serif">Daily consumption</text>
+    <text x="220" y="1418" fill="#103D2D" font-size="52" font-weight="800" font-family="Helvetica, Arial, sans-serif">10 cigarettes</text>
+  </g>
+  <g>
+    <rect x="638" y="1278" width="426" height="180" rx="34" fill="#FFFFFF"/>
+    <text x="682" y="1352" fill="#6A8375" font-size="26" font-weight="600" font-family="Helvetica, Arial, sans-serif">Pack price</text>
+    <text x="682" y="1418" fill="#103D2D" font-size="52" font-weight="800" font-family="Helvetica, Arial, sans-serif">₺80</text>
+  </g>
+  <g>
+    <rect x="176" y="1504" width="888" height="184" rx="34" fill="#0D6D4F"/>
+    <text x="236" y="1600" fill="#F8FFFB" font-size="48" font-weight="800" font-family="Helvetica, Arial, sans-serif">Stay motivated every day</text>
+  </g>
+</svg>
